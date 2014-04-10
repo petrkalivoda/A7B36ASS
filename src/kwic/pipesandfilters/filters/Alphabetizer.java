@@ -18,8 +18,7 @@ public class Alphabetizer extends Filter {
     
     List<String> contents = new ArrayList<String>();
     
-    @Override
-    public void run() {
+    public void perform() {
         String line;
         
         while((line = read()) instanceof String) {
@@ -31,8 +30,6 @@ public class Alphabetizer extends Filter {
         for(String s : contents) {
             write(s);
         }
-        
-        done();
     }
     
 }

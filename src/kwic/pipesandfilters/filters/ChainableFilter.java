@@ -6,18 +6,12 @@
 
 package kwic.pipesandfilters.filters;
 
+import kwic.pipesandfilters.pipes.FilterChain;
+
 /**
  *
  * @author Petr Kalivoda
  */
-public class Output extends Filter {
-    
-    @Override
-    public void perform() {
-        String line;
-        while((line = read()) instanceof String) { //inf not - pipe is closed
-            System.out.println(line);
-        }
-    }
-    
+public interface ChainableFilter {
+    public void setChain(FilterChain fc);
 }

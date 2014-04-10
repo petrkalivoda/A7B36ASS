@@ -23,7 +23,7 @@ abstract class Input extends Filter {
     }
     
     @Override
-    public void run() {
+    public void perform() {
         try {
             BufferedReader br = new BufferedReader(input);
             String line;

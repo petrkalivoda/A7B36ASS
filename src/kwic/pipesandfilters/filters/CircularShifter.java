@@ -12,8 +12,7 @@ package kwic.pipesandfilters.filters;
  */
 public class CircularShifter extends Filter {
     
-    @Override
-    public void run() {
+    public void perform() {
         String[] words;
         StringBuilder shiftedLine;
         String line;
@@ -33,8 +32,6 @@ public class CircularShifter extends Filter {
                 write(shiftedLine.toString());
             }
         }
-        
-        done();
     }
     
 }
